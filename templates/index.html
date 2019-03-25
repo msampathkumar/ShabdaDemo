@@ -8,24 +8,11 @@
 <hr>
 
 <!-- start of copy page -->
-
-
-<hr>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-
-
-
-
-
-
     <div id='gUMArea'>
       <div>
       Record:
-        <input type="radio" name="media" value="video" checked id='mediaVideo'>Video
-        <input type="radio" name="media" value="audio">audio
+        <!--<input type="radio" name="media" value="video" checked id='mediaVideo'>Video-->
+        <!--<input type="radio" name="media" value="audio">audio-->
       </div>
       <button class="btn btn-default"  id='userRecordReq'>Request Stream</button>
     </div>
@@ -34,25 +21,19 @@
       <button  class="btn btn-default" id='stop'>Stop</button>
     </div>
     <div>
-      <ul  class="list-unstyled" id='ul'></ul>
+
     </div>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+        Recordings:
+        <ul  class="list-unstyled" id='userRecordingsList'></ul>
         <script src="./static/main.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -61,10 +42,12 @@
 
     </div>
     <div class="col-sm-4">
-        asdfadsf
+        ShabdaRecorderings:
+        <ul  class="list-unstyled" id='userShabdaRecorderingList'></ul>
     </div>
-    <div class="col-sm-4" style="background-color:lavender;">
-        .col-sm-4
+    <div class="col-sm-4">
+        EmotionPrediction:
+        <ul  class="list-unstyled" id='userEmotionPredictionList'></ul>
     </div>
     </div>
 </div>

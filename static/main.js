@@ -2,7 +2,7 @@
 
 let log = console.log.bind(console),
   id = val => document.getElementById(val),
-  ul = id('ul'),
+  ul = id('userRecordingsList'),
   userRecordReq = id('userRecordReq'),
   start = id('start'),
   stop = id('stop'),
@@ -71,7 +71,8 @@ function makeLink(){
   mt.src = url;
   hf.href = url;
   hf.download = `${counter++}${media.ext}`;
-  hf.innerHTML = `donwload ${hf.download}`;
+//  hf.innerHTML = `download ${hf.download}`;
+  hf.id = `recording{counter++}`;
   li.appendChild(mt);
   li.appendChild(hf);
   ul.appendChild(li);
