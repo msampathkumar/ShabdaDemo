@@ -28,8 +28,8 @@ userRecordReq.onclick = e => {
           gUM: {audio: true}
         }
       };
-//  media = mv.checked ? mediaOptions.video : mediaOptions.audio;
-  media = mediaOptions.audio;
+  media = mv.checked ? mediaOptions.video : mediaOptions.audio;
+//  media = mediaOptions.audio;
   navigator.mediaDevices.getUserMedia(media.gUM).then(_stream => {
     stream = _stream;
     id('gUMArea').style.display = 'none';
@@ -74,7 +74,7 @@ function makeLink(){
   hf.href = url;
   hf.download = `${counter++}${media.ext}`;
 //  hf.innerHTML = `download ${hf.download}`;
-  hf.id = `recording` + {counter++};
+  hf.id = `recording`;
   li.appendChild(mt);
   li.appendChild(hf);
   ul.appendChild(li);
