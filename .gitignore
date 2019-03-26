@@ -1,1 +1,16 @@
+# IDE
 .idea/
+
+# python
+__pycache__/
+.pyc
+
+# audio files
+.wav
+.ogg
+
+# mac system files
+.DS_Store
+
+# data directory
+static/data/
