@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h1>
+<h1 class="text-center">
     Shabda
 </h1>
 <hr>
@@ -24,6 +24,8 @@
 
     </div>
 
+<form enctype="multipart/form-data" id="upload_audio">
+</form>
 
 
 
@@ -37,17 +39,39 @@
 
 
 
-
-
-
     </div>
     <div class="col-sm-4">
         ShabdaRecorderings:
-        <ul  class="list-unstyled" id='userShabdaRecorderingList'></ul>
+        <ul  class="list-unstyled" id='userShabdaRecorderingList'>
+
+            <!--test sample-->
+            <!--<li><audio controls="" src="static/data/temp/sample1.wav "></audio>-->
+            <!--</li>-->
+
+
+        </ul>
     </div>
     <div class="col-sm-4">
         EmotionPrediction:
         <ul  class="list-unstyled" id='userEmotionPredictionList'></ul>
+    </div>
+    </div>
+</div>
+
+
+<hr>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+        <button  class="btn btn-default" id='upload'>Upload</button>
+    </div>
+    <div class="col-sm-4">
+        <button  class="btn btn-default" id='refresh_uploaded'>Refresh</button>
+    </div>
+    <div class="col-sm-4">
+        <button  class="btn btn-default" id='refresh_download'>Refresh</button>
     </div>
     </div>
 </div>

@@ -47,6 +47,7 @@ userRecordReq.onclick = e => {
 start.onclick = e => {
   start.disabled = true;
   stop.removeAttribute('disabled');
+  // TODO: Add Timer
   chunks=[];
   recorder.start();
 }
@@ -54,6 +55,7 @@ start.onclick = e => {
 
 stop.onclick = e => {
   stop.disabled = true;
+  // TODO: Add Timer
   recorder.stop();
   start.removeAttribute('disabled');
 }
@@ -72,8 +74,52 @@ function makeLink(){
   hf.href = url;
   hf.download = `${counter++}${media.ext}`;
 //  hf.innerHTML = `download ${hf.download}`;
-  hf.id = `recording{counter++}`;
+  hf.id = `recording` + {counter++};
   li.appendChild(mt);
   li.appendChild(hf);
   ul.appendChild(li);
+
+//  var form = new FormData(document.getElementById('upload_audio'));
+//  blob = new Blob(chunks, {type: media.type });
+//  form.append("user_audio_blob", blob);
+//  var request = new XMLHttpRequest();
+//  var async = true;
+//  request.open("POST", "/upload", async);
+//  request.send(form);
+  uploadAudioChunks(chunks);
+
+
+}
+
+//function submitForm(){
+//var goto_url = '/upload';
+//blob = new Blob(chunks, {type: media.type })
+//$.ajax({
+//			type: 'POST',
+//			url: goto_url,
+//			data: {user_audio_blob: blob},
+//			dataType: "json",
+//			success: function(data)
+//					 {
+//					    var dataJson = JSON.parse(data);
+//						// debugger;
+//					 },
+//			dataType: 'html'
+//		});
+//
+//}
+
+function uploadAudioChunks(audio_chunks){
+    var form = new FormData(document.getElementById('upload_audio'));
+    var blob = new Blob(audio_chunks, {type: media.type });
+    form.append("user_audio_blob", blob);
+    var request = new XMLHttpRequest();
+    var async = true;
+    request.open("POST", "/upload", async);
+    request.send(form);
+    console.log('Successfully uploaded Audio file!!');
+}
+
+function add(){
+    console.log('asdfa');
 }
