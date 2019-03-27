@@ -6,6 +6,7 @@ let log = console.log.bind(console),
   userRecordReq = id('userRecordReq'),
   start = id('start'),
   stop = id('stop'),
+  upload = id('upload_recording'),
   stream,
   recorder,
   counter=1,
@@ -61,6 +62,12 @@ stop.onclick = e => {
 }
 
 
+upload.onclick = e => {
+  log('Processing - Upload Request,..');
+  uploadAudioChunks(chunks);
+  log('Completed  - Upload Request,... !!');
+}
+
 
 function makeLink(){
   let blob = new Blob(chunks, {type: media.type })
@@ -77,6 +84,7 @@ function makeLink(){
   hf.id = `recording`;
   li.appendChild(mt);
   li.appendChild(hf);
+  ul.innerHTML = ''
   ul.appendChild(li);
 
 //  var form = new FormData(document.getElementById('upload_audio'));
@@ -118,8 +126,4 @@ function uploadAudioChunks(audio_chunks){
     request.open("POST", "/upload", async);
     request.send(form);
     console.log('Successfully uploaded Audio file!!');
-}
-
-function add(){
-    console.log('asdfa');
 }

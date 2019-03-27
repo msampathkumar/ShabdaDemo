@@ -9,12 +9,12 @@
 
 
 
-let log = console.log.bind(console),
-  id = val => document.getElementById(val),
-  refresh_uploaded = id('refresh_uploaded'),
-  refresh_download = id('refresh_download'),
-  userShabdaRecorderingList = id('userShabdaRecorderingList'),
-  userEmotionPredictionList = id('userEmotionPredictionList');
+let my_log = console.log.bind(console),
+  get_id = val => document.getElementById(val),
+  refresh_uploaded = get_id('refresh_uploaded'),
+  refresh_download = get_id('refresh_download'),
+  userShabdaRecorderingList = get_id('userShabdaRecorderingList'),
+  userEmotionPredictionList = get_id('userEmotionPredictionList');
 
 
 
