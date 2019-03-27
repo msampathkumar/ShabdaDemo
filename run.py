@@ -12,7 +12,13 @@ import config
 
 from glob import glob
 
+ALLOWED_EXTENSIONS = set(['ogg', 'wav', 'mp4'])
+
+
 app = Flask(__name__, static_folder='static', static_url_path='/static')
+app.config['UPLOAD_FOLDER'] = config.TEMP_DIR
+app.config['MAX_CONTENT_LENGTH'] = 512 * 1024 * 1024
+
 
 @app.route("/")
 @app.route("/123")
@@ -25,7 +31,7 @@ def demo_index():
     return render_template('demo.html')
 
 
-@app.route("/upload", methods=['POST', 'GET'])
+@app.route("/upload", methods=['POST'])
 def _rest_audio_upload():
     filename = 'static/data/temp/sample1.ogg'
     wav = request.files['user_audio_blob'].save(filename)

@@ -3,7 +3,9 @@ import config
 import subprocess
 
 
-subprocess.run(['rm', 'static/data/temp/*'])
+print('Cleaning up data\n'*5)
+subprocess.run(['rm', '/Users/sampathm/PycharmProjects/ShabdaDemo/static/data/temp/*'])
+subprocess.run(['rm', '/Users/sampathm/PycharmProjects/ShabdaDemo/static/data/uploads/*'])
 
 
 def convert_to_wav(src_filename, dest_filename=None):
