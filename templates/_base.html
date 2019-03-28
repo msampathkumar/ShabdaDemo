@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Shabda</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-
-
-</head>
-
-
-<body>
-
-
-
-<div class="container">
-<h1 class="text-center">
-    Shabda
-</h1>
-</div>
-
-
-<div class="container">
-<a href="/">Home</a>
-<a href="/demo">Demo</a>
-</div>
-
-<hr>
-
-
-{% block content %}
-<div class="container">
-  <h1>Content is Missing in Template Page. Please Check !!</h1>
-</div>
-{% endblock %}
-
-
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <title>Shabda</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <div class="container">
+         <h1 class="text-center">
+            Shabda
+         </h1>
+         <div>
+            <div class="col-sm-8">
+               <a href="/">Home</a>
+               <a href="/demo">Demo</a>
+            </div>
+            <div class="col-sm-4">
+               <div>
+                  <p>
+                     Time: <span id="timer"></span>
+                  </p>
+                  <script src="./static/common.js"></script>
+               </div>
+            </div>
+         </div>
+      </div>
+      <hr>
+      {% block content %}
+      <div class="container">
+         <h1>Content is Missing in Template Page. Please Check !!</h1>
+      </div>
+      {% endblock %}
+      <div id="footer">
+         <div class="container navbar-fixed-bottom">
+            <hr>
+            <p class="muted credit">Example courtesy <a href="https://martinbean.co.uk/">Martin Bean</a> and <a href="https://ryanfait.com/">Ryan Fait</a>.</p>
+         </div>
+      </div>
+   </body>
 </html>
