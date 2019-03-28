@@ -59,7 +59,7 @@ start.onclick = e => {
     start.disabled = true;
     stop.removeAttribute('disabled');
     // TODO: Add Timer
-    ul.innerHTML = '<img src="./static/loading.gif">'
+    ul.innerHTML = '<img src="./static/images/loading.gif">'
     chunks = [];
     recorder.start();
 }
