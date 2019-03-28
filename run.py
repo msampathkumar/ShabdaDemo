@@ -9,6 +9,7 @@ from flask import Flask, render_template, request, json, jsonify
 import os
 import backend
 import config
+from flask_sslify import SSLify
 
 from glob import glob
 
@@ -16,8 +17,12 @@ ALLOWED_EXTENSIONS = set(['ogg', 'wav', 'mp4'])
 
 
 app = Flask(__name__, static_folder='static', static_url_path='/static')
+sslify = SSLify(app)
+
 app.config['UPLOAD_FOLDER'] = config.TEMP_DIR
 app.config['MAX_CONTENT_LENGTH'] = 512 * 1024 * 1024
+
+
 
 
 @app.route("/")

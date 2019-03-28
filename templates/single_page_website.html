@@ -1,0 +1,58 @@
+{% extends "_base.html" %}
+{% block content %}
+<!-- start of copy page -->
+<div class="container">
+   <div id='gUMArea'>
+      <div>
+         Record:
+         <input type="radio" name="media" value="video" checked id='mediaVideo'>Video
+         <input type="radio" name="media" value="audio">audio
+      </div>
+      <button class="btn btn-default"  id='userRecordReq'>Request Stream</button>
+   </div>
+   <div id='btns'>
+      <button  class="btn btn-default" id='start'>Start</button>
+      <button  class="btn btn-default" id='stop'>Stop</button>
+   </div>
+   <div>
+   </div>
+   <form enctype="multipart/form-data" id="upload_audio"></form>
+</div>
+</hr>
+<div class="container">
+   <div class="row">
+      <div class="col-sm-4">
+         Recordings:
+         <ul  class="list-unstyled" id='userRecordingsList'></ul>
+      </div>
+      <div class="col-sm-4">
+         ShabdaRecorderings:
+         <ul  class="list-unstyled" id='userShabdaRecorderingList'>
+            <!--test sample-->
+            <!--<li><audio controls="" src="static/data/temp/sample1.wav "></audio>-->
+            <!--</li>-->
+         </ul>
+      </div>
+      <div class="col-sm-4">
+         EmotionPrediction:
+         <ul  class="list-unstyled" id='userEmotionPredictionList'></ul>
+      </div>
+   </div>
+</div>
+</hr>
+<div class="container">
+   <div class="row">
+      <div class="col-sm-4">
+         <button  class="btn btn-default" id='upload_recording'>Upload</button>
+      </div>
+      <div class="col-sm-4">
+         <button  class="btn btn-default" id='refresh_uploaded'>Refresh</button>
+      </div>
+      <div class="col-sm-4">
+         <button  class="btn btn-default" id='refresh_download'>Refresh</button>
+      </div>
+   </div>
+</div>
+<script src="./static/main.js"></script>
+<script src="./static/demo.js"></script>
+{% endblock %}

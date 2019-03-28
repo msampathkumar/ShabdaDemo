@@ -1,74 +1,41 @@
 {% extends "_base.html" %}
-
 {% block content %}
-
 <!-- start of copy page -->
-    <div id='gUMArea'>
+<!--Formatter : https://www.freeformatter.com/html-formatter.html -->
+<div class="container">
+   <div>
+      <h4>
+         Time:
+         <span id="timer"></span>
+      </h4>
+   </div>
+   <div id='gUMArea'>
       <div>
-      Record:
-        <input type="radio" name="media" value="video" checked id='mediaVideo'>Video
-        <input type="radio" name="media" value="audio">audio
+         Record:
+         <input type="radio" name="media" value="video" checked id='mediaVideo'>Video
+         <input type="radio" name="media" value="audio">Audio
       </div>
       <button class="btn btn-default"  id='userRecordReq'>Request Stream</button>
-    </div>
-    <div id='btns'>
+   </div>
+   <div id='btns'>
       <button  class="btn btn-default" id='start'>Start</button>
       <button  class="btn btn-default" id='stop'>Stop</button>
-    </div>
-    <div>
-
-    </div>
-
-<form enctype="multipart/form-data" id="upload_audio">
-</form>
-
-
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-        Recordings:
-        <ul  class="list-unstyled" id='userRecordingsList'></ul>
-
-
-
-    </div>
-    <div class="col-sm-4">
-        ShabdaRecorderings:
-        <ul  class="list-unstyled" id='userShabdaRecorderingList'>
-
-            <!--test sample-->
-            <!--<li><audio controls="" src="static/data/temp/sample1.wav "></audio>-->
-            <!--</li>-->
-
-
-        </ul>
-    </div>
-    <div class="col-sm-4">
-        EmotionPrediction:
-        <ul  class="list-unstyled" id='userEmotionPredictionList'></ul>
-    </div>
-    </div>
+   </div>
+   <div>
+   </div>
+   <form enctype="multipart/form-data" id="upload_audio"></form>
 </div>
-
-
-
+</hr>
 <div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-        <button  class="btn btn-default" id='upload_recording'>Upload</button>
-    </div>
-    <div class="col-sm-4">
-        <button  class="btn btn-default" id='refresh_uploaded'>Refresh</button>
-    </div>
-    <div class="col-sm-4">
-        <button  class="btn btn-default" id='refresh_download'>Refresh</button>
-    </div>
-    </div>
+   <div></div>
+   <div class="row">
+      <h4>Recordings:</h4>
+      <ul  class="list-unstyled" id='userRecordingsList'></ul>
+   </div>
+   <div class="row">
+      <button  class="btn btn-default" id='upload_recording'>Upload</button>
+   </div>
 </div>
-
+</hr>
 <script src="./static/main.js"></script>
-<script src="./static/demo.js"></script>
-
 {% endblock %}
